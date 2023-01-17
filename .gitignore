@@ -1,1 +1,6 @@
-/Django
+*/bin
+*/include
+*/lib
+*/pyvenv.cfg
+*db.sqlite3
+*__pycache__
