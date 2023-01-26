@@ -1,5 +1,9 @@
-<form action="{% url 'demoapp:getform' %}" method="POST"> {% csrf_token %} 
-    <p>Name: <input type="text" name="id"></p> 
-    <p>UserID :<input type="name" name="name"></p> 
-    <input type="submit"> 
-</form> 
+<html>
+<body>
+    <form action="/form" action="POST">
+        {% csrf_token %}
+        <table>
+            {{ f }}
+        </table>
+</body>
+<html>
