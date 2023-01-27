@@ -19,7 +19,7 @@ from django.urls import include, path
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("demo/", include("demoapp.urls", namespace='demoapp')),
-    path("newdemo/", include("newapp.urls", namespace='newdemo')),
+    path("newapp/", include("newapp.urls", namespace='newapp')),
 ]
 
 handler404 = 'demoproject.views.handler404'
