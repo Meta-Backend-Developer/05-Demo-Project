@@ -13,7 +13,8 @@ urlpatterns = [
     path('getform/', views.getform, name='getform'),
     path('dishes/<str:dish>', views.menuitems),
     path('form/', views.showform, name='form'),
-    path('formview/', views.form_view, name='formview')
+    path('formview/', views.form_view, name='formview'),
+    path('about/', views.about, name='about'),
 ]
 """ maps the index function from the views file to the homepage.
 The index function generates the content of the page.
