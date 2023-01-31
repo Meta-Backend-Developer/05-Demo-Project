@@ -13,7 +13,7 @@ def about(request):
                     The restaurant has a rustic and relaxed atmosphere\
                     with moderate prices, making it a popular place for a\
                     meal any time of the day."} 
-                    
+
     return render(request, 'about.html', about_content)
 
 
@@ -71,3 +71,13 @@ def menuitems(request, dish):
 
     description = items[dish]
     return HttpResponse(f"<h2> {dish} </h2>" + description)
+
+
+def menu(request):
+    newmenu = {'mains': [
+        {'name': 'falafel', 'price': '12'},
+        {'name': 'shwarma', 'price': '15'},
+        {'name': 'gyro', 'price': '10'},
+        {'name': 'hummus', 'price': '5'},
+    ]}
+    return render(request, 'menu.html', newmenu)
