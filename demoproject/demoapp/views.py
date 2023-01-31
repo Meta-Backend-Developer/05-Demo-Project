@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse 
 from .forms import ApplicationForm, LogForm
-from django.shortcuts import render
+from .models import Menu
 
 def about(request):
     about_content = {'about': "Little Lemon is a family-owned\
@@ -74,10 +74,6 @@ def menuitems(request, dish):
 
 
 def menu(request):
-    newmenu = {'mains': [
-        {'name': 'falafel', 'price': '12'},
-        {'name': 'shwarma', 'price': '15'},
-        {'name': 'gyro', 'price': '10'},
-        {'name': 'hummus', 'price': '5'},
-    ]}
-    return render(request, 'menu.html', newmenu)
+    menu_items = Menu.objects.all()
+    items_dict = {'menu': menu_items}
+    return render(request, 'menu.html', items_dict)
