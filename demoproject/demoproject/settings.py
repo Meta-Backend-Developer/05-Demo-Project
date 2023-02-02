@@ -70,8 +70,6 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_DIRS = 'demoapp/static',
-
 WSGI_APPLICATION = "demoproject.wsgi.application"
 
 
@@ -122,6 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+
+STATICFILES_DIRS = 'demoproject/static',
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
