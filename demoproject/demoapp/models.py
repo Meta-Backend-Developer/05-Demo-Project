@@ -19,3 +19,11 @@ class Logger(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     time_log = models.TimeField(help_text="Enter the exact time!")
+
+class Reservation(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    booking_time = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.first_name
